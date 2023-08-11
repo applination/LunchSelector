@@ -1,7 +1,5 @@
--- To Run this Program
--- do `ghci`
--- then :l Lunch.hs
--- then lunch
+module Main where
+
 import Control.Concurrent (threadDelay)
 import Data.List
 import GHC (GhcException (ProgramError))
@@ -28,8 +26,8 @@ countdown n
 randomNumber :: IO Int
 randomNumber = randomRIO (1, 5)
 
-lunch :: IO ()
-lunch = do
+main :: IO ()
+main = do
   number <- randomNumber
   -- putStrLn $ "Random number between 1 and 4 is: " ++ show number
   putStrLn "Restaurant selection Starting..."
